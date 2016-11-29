@@ -1,0 +1,78 @@
+@windowMarginLeftRight: 15%;
+@windowMarginTop: 10%;
+
+@tableMarginBottom: 20%;
+
+.landing-page-view {
+
+  .visible {
+    visibility: visible;
+    opacity: 1;
+  }
+  .hide {
+    visibility: hidden;
+    opacity: 0;
+  }
+  .left30 {
+    transform: translateX(-30px);
+  }
+  .left30back {
+    transform: translateX(0px);
+  }
+
+  .books-transform {
+    transform: translateX(25px)translateY(-10px);
+  }
+  .books-transform-back {
+    transform: translateX(0px)translateY(0px);
+  }
+  &.isAnimated {
+    #Morning_window, #Day_window {
+      transition: visibility 2s, opacity 3s linear;
+    }
+    #Screen_1, #Screen_2 {
+      transition: visibility 2s, opacity 2s linear;
+    }
+    #Coffee_cup {
+      transition: transform 1s, visibility 1s, opacity 1s linear;
+      &.left30back{
+        transition: transform 0.1s linear;
+      }
+    }
+    #Camera {
+      transition: visibility 1s, opacity 1s linear;
+    }
+    #Lamp_on {
+      transition: visibility 2s, opacity 2s linear;
+    }
+    #Books, #Robot {
+      transition: transform 1s linear;
+    }
+    #Robot.left30back {
+      transition: transform 0.5s linear;
+    }
+    #Books.books-transform-back {
+      transition: transform 0.5s linear;
+    }
+
+  }
+
+  svg {
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    @media only screen and (max-height: 685px) {
+      height: 95%;
+    }
+    @media screen and (max-width: 720px) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+      overflow: hidden;
+  }
+}
+
+

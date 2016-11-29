@@ -1,0 +1,31 @@
+@baseBackground: #53c8d3;
+@navColor: #ffffff;
+@headerHeight: 50px;
+
+@import "../modules/main/style/style";
+
+.application-header {
+  width: 100%;
+  height: @headerHeight;
+  background-color: @baseBackground;
+}
+
+.application-header-navigation {
+  margin-left: 50%;
+  margin-top: 10px;
+}
+
+.application-header-navigation-link {
+  color: @navColor;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.landing-page-view {
+  position: absolute;
+  background-color: @baseBackground;
+  width: 100%;
+  height: calc(~'100% - '@headerHeight);
+}

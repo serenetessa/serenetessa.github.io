@@ -1,0 +1,62 @@
+{
+  "name": "serenetessa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/initialize.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket.org:ilyalesik/serenetessa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-resolve": "^1.10.1",
+    "browser-sync": "^2.9.11",
+    "browserify": "^12.0.1",
+    "coffeeify": "^1.1.0",
+    "gulp": "^3.9.0",
+    "gulp-cached": "^1.1.0",
+    "gulp-less": "^3.0.3",
+    "gulp-replace": "^0.5.4",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.4.2",
+    "gulp-util": "^3.0.7",
+    "lodash": "^3.10.1",
+    "resolve": "^1.1.6",
+    "stringify": "^3.1.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.6.0",
+    "yargs": "^3.29.0"
+  },
+  "browser": {},
+  "stringify": {
+    "extensions": [
+      ".hbs",
+      ".html"
+    ]
+  },
+  "browserify": {
+    "transform": [
+      "coffeeify",
+      "stringify"
+    ]
+  },
+  "vendorDependencies": {
+    "AppRouter": "./src/common/router/AppRouter"
+  },
+  "dependencies": {
+    "jquery": "3.0.0-beta1",
+    "backbone": "^1.2.3",
+    "backbone.marionette": "^2.4.3",
+    "backbone.radio": "^1.0.2",
+    "install": "^0.2.3",
+    "jquery.mousewheel": "^3.1.9",
+    "moment": "^2.10.6",
+    "npm": "^3.3.10",
+    "underscore": "^1.8.3"
+  }
+}
