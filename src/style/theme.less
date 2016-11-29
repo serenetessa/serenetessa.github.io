@@ -22,11 +22,20 @@
 
 @import "../modules/main/style/style";
 
+body {
+  @media screen and (max-width: 720px) {
+    overflow: hidden;
+  }
+}
+
 .application-header {
   width: 100%;
   height: @headerHeight;
   background-color: @baseBackground;
   padding-top: @headerPaddingTop;
+  @media screen and (max-width: 720px) {
+    height: auto;
+  }
   .application-header-title {
     float: left;
     font-family: Fundamental Brigade, sans-serif;
@@ -35,10 +44,18 @@
     //padding-left: 100px;
     position: fixed;
     left: 17%;
+    @media screen and (max-width: 720px) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
   .application-header-navigation {
     margin-left: 50%;
     margin-top: 10px;
+    @media screen and (max-width: 720px) {
+      margin-top: 50px;
+      margin-left: 0;
+    }
     .application-header-navigation-link {
       font-family: 'Source Sans Pro', sans-serif;
       font-size: 14pt;
@@ -48,6 +65,13 @@
         text-decoration: underline;
       }
       padding-right: 30px;
+      @media screen and (max-width: 720px) {
+        display: block;
+        text-align: center;
+        width: 100%;
+        font-size: 20pt;
+        padding-top: 20px;
+      }
     }
 
   }
