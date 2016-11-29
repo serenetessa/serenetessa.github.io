@@ -1,6 +1,24 @@
+@fundamental_brigadet_path: '../font/';
+@fundamental_brigadet_fileName: 'Fundamental-Brigade';
+
+@font-face {
+  font-family: 'Fundamental Brigade';
+
+  src: url('@{fundamental_brigadet_path}@{fundamental_brigadet_fileName}.eot');
+  src: url('@{fundamental_brigadet_path}@{fundamental_brigadet_fileName}.eot?#iefix') format('embedded-opentype'),
+  url('@{fundamental_brigadet_path}@{fundamental_brigadet_fileName}.woff') format('woff'),
+  url('@{fundamental_brigadet_path}@{fundamental_brigadet_fileName}.ttf') format('truetype'),
+  url('@{fundamental_brigadet_path}@{fundamental_brigadet_fileName}.svg#1') format('svg');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 @baseBackground: #53c8d3;
 @navColor: #ffffff;
 @headerHeight: 50px;
+@headerPaddingTop: 20px;
 
 @import "../modules/main/style/style";
 
@@ -8,26 +26,33 @@
   width: 100%;
   height: @headerHeight;
   background-color: @baseBackground;
-}
+  padding-top: @headerPaddingTop;
+  .application-header-title {
+    float: left;
+    font-family: Fundamental Brigade, sans-serif;
+    font-size: 28pt;
+    color: @navColor;
+    padding-left: 100px;
+  }
+  .application-header-navigation {
+    margin-left: 50%;
+    margin-top: 10px;
+    .application-header-navigation-link {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 14pt;
+      color: @navColor;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+      padding-right: 30px;
+    }
 
-.application-header-navigation {
-  margin-left: 50%;
-  margin-top: 10px;
-}
-
-.application-header-navigation-link {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 14pt;
-  color: @navColor;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
   }
 }
-
 .landing-page-view {
   position: absolute;
   background-color: @baseBackground;
   width: 100%;
-  height: calc(~'100% - '@headerHeight);
+  height: calc(~'100% - '@headerHeight + @headerPaddingTop);
 }

@@ -49,11 +49,11 @@
     "AppRouter": "./src/common/router/AppRouter"
   },
   "dependencies": {
-    "jquery": "3.0.0-beta1",
     "backbone": "^1.2.3",
     "backbone.marionette": "^2.4.3",
     "backbone.radio": "^1.0.2",
     "install": "^0.2.3",
+    "jquery": "3.0.0-beta1",
     "jquery.mousewheel": "^3.1.9",
     "moment": "^2.10.6",
     "npm": "^3.3.10",

@@ -102,7 +102,8 @@ function bundle() {
 }
 
 gulp.task('copyfonts', function() {
-
+    gulp.src('./src/font/**/*.*')
+        .pipe(gulp.dest(buildPath + 'font'));
 });
 
 gulp.task('copyindex', function() {
