@@ -8,7 +8,6 @@ class Router extends AppRouter
         @controller = options.controller
 
     appRoutes:
-        "": "default"
         "#{url}": "default"
 
 module.exports = Router
