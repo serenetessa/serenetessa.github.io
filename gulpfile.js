@@ -111,10 +111,10 @@ gulp.task('copyindex', function() {
         t.pipe(replace(/window.domain = '.*';/,"window.domain = '';"));
     if (argv.suffixUri)
         t.pipe(replace(/window.suffixUri = '.*';/,"window.suffixUri = '"+argv.suffixUri+"';"));
-    t.pipe(replace('MAIN.JS','./src/js/main.min.js?version='+argv.planName+'#'+argv.build));
-    t.pipe(replace('VENDOR.JS','./src/js/vendor.min.js?version='+argv.planName+'#'+argv.build))
-        .pipe(replace('THEME.CSS','./src/style/theme.css?version='+argv.planName+'#'+argv.build))
-        .pipe(gulp.dest(buildPath+"../"));
+    t.pipe(replace('MAIN.JS','./dist/src/js/main.min.js?version='+argv.planName+'#'+argv.build));
+    t.pipe(replace('VENDOR.JS','./dist/src/js/vendor.min.js?version='+argv.planName+'#'+argv.build))
+        .pipe(replace('THEME.CSS','./dist/src/style/theme.css?version='+argv.planName+'#'+argv.build))
+        .pipe(gulp.dest("./"));
 });
 
 gulp.task('copyimgs', function() {
@@ -126,7 +126,7 @@ gulp.task('default', ['copyfonts','copyimgs', 'copyindex','build-vendor','js','l
 
 gulp.task('start-server',function(){
     browserSync.init({
-        server: "./dist/"
+        server: "./"
     });
 });
 
