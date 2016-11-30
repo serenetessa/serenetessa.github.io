@@ -72,21 +72,19 @@ class LandingPageView extends Marionette.ItemView
                 @$(key).addClass value.newClass
         @stepIndex += 1
         if @stepIndex > @animation.steps.length
+            @stepIndex = 0
+            console.log 're-initial'
+            $('.landing-page-view').removeClass 'isAnimated'
+            for i in [@animation.steps.length - 1..0] by -1
+                _.each @animation.steps[i], (value, key)=>
+                    if value.deleteClass
+                        @$(key).addClass value.deleteClass
+                    if value.newClass
+                        @$(key).removeClass value.newClass
             setTimeout ()=>
-                @stepIndex = 0
-                console.log 're-initial'
-                $('.landing-page-view').removeClass 'isAnimated'
-                for i in [@animation.steps.length - 1..0] by -1
-                    _.each @animation.steps[i], (value, key)=>
-                        if value.deleteClass
-                            @$(key).addClass value.deleteClass
-                        if value.newClass
-                            @$(key).removeClass value.newClass
-                setTimeout ()=>
-                    $('.landing-page-view').addClass 'isAnimated'
-                    @onRender()
-                , 2000
-            , 5000
+                $('.landing-page-view').addClass 'isAnimated'
+                @onRender()
+            , 300
 
 
 
