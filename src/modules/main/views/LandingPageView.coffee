@@ -30,15 +30,13 @@ class LandingPageView extends Marionette.ItemView
             }
             {
                 "#Day_window": {newClass: 'hide'}
+                "#Lamp_on": {deleteClass: "hide"}
             }
             {
                 "#Books": {newClass: 'books-transform'}
             }
             {
                 "#Screen_2": {newClass: 'hide'}
-            }
-            {
-                "#Lamp_on": {deleteClass: "hide"}
             }
             {
                 "#Robot": {newClass: 'left30back'}
