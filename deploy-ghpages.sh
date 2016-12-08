@@ -8,5 +8,5 @@ gulp
  echo "commit"
  git commit -m "Deployed to Github Pages"
  echo "push https://${GH_TOKEN}@${GH_REF}"
- git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages > /dev/null 2>&1
+ git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master
 )
