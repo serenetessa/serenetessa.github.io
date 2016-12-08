@@ -1,6 +1,6 @@
 #!/bin/bash
 gulp
-( cd out
+( cd dist
  git init
  git config user.name "Travis-CI"
  git config user.email "travis@nodemeatspace.com"
