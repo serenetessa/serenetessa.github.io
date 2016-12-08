@@ -1,6 +1,4 @@
 #!/bin/bash
-rm -rf dist || exit 0;
-mkdir dist;
 gulp
 ( cd out
  git init
