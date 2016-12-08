@@ -5,4 +5,8 @@ node_js:
   - "4"
 before_script:
   - npm install -g gulp
-script: gulp
+script: npm run-script deploy
+env:
+ global:
+ - GH_REF: github.com/serenetessa/serenetessa.github.io.git
+ - secure: 931250cc79568feccfd12809d61705509c3a3dd1
